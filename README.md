@@ -1,31 +1,88 @@
-# Week-6-GNCIPL-final-project-
-Final group project EDA part processed and worked on 
-🧠 Exploratory Data Analysis (EDA)
+ Week-6-GNCIPL-final-project-
+[27/10, 20:32] Kavya Intern GNCIPL: # Insurance Fraud Detection — Exploratory Data Analysis (EDA)
 
-The EDA phase focused on understanding the structure, distribution, and relationships within the dataset to prepare for modeling.
+ Project Context
 
-Key Steps:
+This repository contains the Exploratory Data Analysis (EDA) step of our group project on insurance fraud detection. EDA is a critical intermediary step following data acquisition and before feature engineering, modeling, and deployment.
 
-Data Overview
+---
 
-Loaded the dataset and inspected data types, column information, and summary statistics.
+ Objective
 
-Checked for missing values and data completeness across features.
+The goal of this step is to thoroughly understand the dataset characteristics, detect anomalies, identify relationships between variables, and gain insights that will guide subsequent feature engineering and model building.
 
-Univariate Analysis
+---
 
-Numerical Variables: Visualized distributions using histograms to identify skewness and outliers.
+Files Included
 
-Categorical Variables: Used count plots to explore frequency distributions for columns such as region, sex, smoker, and insuranceclaim.
+- **notebooks/fraud_detection_modelling.ipynb**  
+  Jupyter notebook containing detailed data exploration, summary statistics, missing data checks, and visualizations.
 
-Bivariate Analysis
+- **data/nhic-1.csv**  
+  Dataset comprising insurance claim records used for EDA.
 
-Explored relationships between numerical features through a correlation heatmap, identifying strong correlations and potential predictors.
+---
 
-Analyzed how categorical variables (e.g., smoking status, region) impact numerical outcomes.
+ Key Activities
 
-Insights
+ 1. Data Loading and Initial Inspection
 
-Certain demographic and behavioral factors showed clear patterns related to claims and potential fraud indicators.
+- Loaded the dataset and inspected basic structure using commands such as `.head()`, `.info()`, and `.describe()`.
+- Verified column data types and checked for missing values to validate data completeness.
 
-Minimal missing data, ensuring readiness for preprocessing and feature engineering.
+ 2. Statistical Summary
+
+- Computed descriptive statistics for numerical columns to understand distributions, means, medians, ranges, and anomalies.
+- Analyzed categorical data distributions to understand class balance and categorical feature diversity.
+
+ 3. Visual Exploration
+
+- Created histograms and boxplots for numerical features to detect skewness, spread, and outliers.
+- Generated count plots for categorical variables to evaluate frequency distributions.
+- Examined relationships between features through scatter plots and correlation heatmaps.
+
+ 4. Outlier Detection
+
+- Applied Z-score statistical method to identify outliers in key numerical variables.
+- Visualized outliers and extreme values to assess their impact on data quality.
+- Documented outliers to inform filtering decisions in feature engineering.
+
+---
+
+ Insights Gained
+
+- No missing values found, confirming dataset completeness.
+- Certain financial columns (e.g., bill amount) exhibited skewness with prominent outliers.
+- Strong positive correlations observed between bill amount, claimed amount, and amount paid.
+- Smokers tend to have significantly higher medical bills.
+- Regional differences in claim patterns were apparent.
+- Temporal aspects such as the time delay between application and claim were identified as potential predictive features.
+
+---
+
+ How to Run the Notebook
+
+1. Install required Python packages (e.g., pandas, matplotlib, seaborn).
+2. Open the notebook in Jupyter and run cells sequentially to reproduce visualizations and tables.
+[27/10, 20:32] Kavya Intern GNCIPL: pip install pandas matplotlib seaborn jupyter
+jupyter notebook notebooks/fraud_detection_modelling.ipynb
+[27/10, 20:33] Kavya Intern GNCIPL: ---
+
+Notes for Next Steps
+
+- Insights from this analysis informed the feature engineering and modeling steps.
+- Particular attention should be paid to handling outliers and exploiting strong feature correlations during model building.
+
+---
+
+Author
+K Rohit 
+
+  
+
+---
+
+ Acknowledgments
+
+Dataset provided by National Health Insurance Corporation (NHIC).  
+This project is a collaborative effort between team members focusing on different pipeline stages.
