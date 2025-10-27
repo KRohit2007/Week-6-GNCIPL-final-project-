@@ -1,5 +1,5 @@
  Week-6-GNCIPL-final-project-
-[27/10, 20:32] Kavya Intern GNCIPL: # Insurance Fraud Detection — Exploratory Data Analysis (EDA)
+# Insurance Fraud Detection — Exploratory Data Analysis (EDA)
 
  Project Context
 
@@ -64,9 +64,9 @@ Files Included
 
 1. Install required Python packages (e.g., pandas, matplotlib, seaborn).
 2. Open the notebook in Jupyter and run cells sequentially to reproduce visualizations and tables.
-[27/10, 20:32] Kavya Intern GNCIPL: pip install pandas matplotlib seaborn jupyter
+ pip install pandas matplotlib seaborn jupyter
 jupyter notebook notebooks/fraud_detection_modelling.ipynb
-[27/10, 20:33] Kavya Intern GNCIPL: ---
+
 
 Notes for Next Steps
 
